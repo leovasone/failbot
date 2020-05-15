@@ -1,0 +1,12 @@
+Para o funcionamento correto siga os passos abaixo:
+
+1 - Dentro da plataforma GCP crie uma instância linux com o SSH ativado.
+Caso tenha dúvida na criação de VM na nuvem: https://cloud.google.com/compute/docs/quickstart-linux
+
+Crie um Container (pode ser com dockerfile)
+
+docker build -t failbot .
+docker tag failbot gcr.io/<Nome-Projeto-GCP>/failbot
+docker push gcr.io/<Nome-Projeto-GCP>/failbot:latest
+
+2 - Configurando API Twitter (Access Tokens)
